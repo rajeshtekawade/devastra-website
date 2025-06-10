@@ -85,11 +85,12 @@ export default function Home() {
             <div className="md:w-1/2 mt-8 md:mt-0">
               <div className="relative rounded-lg overflow-hidden shadow-xl border border-gray-200 dark:border-gray-800">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src="/apx.jpg?height=400&width=600"
                   alt="ApX Engine AI Assistant"
                   width={600}
                   height={400}
                   className="w-full h-auto"
+                  priority
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
                   <h3 className="text-white text-xl font-bold">ApX Engine in Action</h3>
