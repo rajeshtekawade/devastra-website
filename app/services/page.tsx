@@ -79,7 +79,7 @@ export default function ServicesPage() {
             </div>
             <div className="order-first lg:order-last mb-8 lg:mb-0">
               <Image
-                src="/placeholder.svg?height=600&width=600"
+                src="/apx1.jpg?height=600&width=600"
                 alt="ApX Engine AI Technology"
                 width={600}
                 height={600}
@@ -148,7 +148,7 @@ export default function ServicesPage() {
             </div>
             <div className="order-first lg:order-last mb-8 lg:mb-0">
               <Image
-                src="/placeholder.svg?height=600&width=600"
+                src="/webdev.jpg?height=600&width=600"
                 alt="Web Development"
                 width={600}
                 height={600}
@@ -165,7 +165,7 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="mb-8 lg:mb-0">
               <Image
-                src="/placeholder.svg?height=600&width=600"
+                src="/appdev.jpg?height=600&width=600"
                 alt="App Development"
                 width={600}
                 height={600}
@@ -285,7 +285,7 @@ export default function ServicesPage() {
             </div>
             <div className="order-first lg:order-last mb-8 lg:mb-0">
               <Image
-                src="/placeholder.svg?height=600&width=600"
+                src="/uiux.jpg?height=600&width=600"
                 alt="UI/UX Design"
                 width={600}
                 height={600}
@@ -302,7 +302,7 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="mb-8 lg:mb-0">
               <Image
-                src="/placeholder.svg?height=600&width=600"
+                src="/buss.jpg?height=600&width=600"
                 alt="Digital Marketing"
                 width={600}
                 height={600}
@@ -421,7 +421,7 @@ export default function ServicesPage() {
             </div>
             <div className="order-first lg:order-last mb-8 lg:mb-0">
               <Image
-                src="/placeholder.svg?height=600&width=600"
+                src="/auto.jpg?height=600&width=600"
                 alt="Business Automation"
                 width={600}
                 height={600}
