@@ -43,7 +43,7 @@ export default function AboutPage() {
 
             <div className="order-first lg:order-last mb-8 lg:mb-0">
               <Image
-                src="/placeholder.svg?height=600&width=600"
+                src="/abt.jpg?height=600&width=600"
                 alt="Our Journey"
                 width={600}
                 height={600}
@@ -253,7 +253,7 @@ export default function AboutPage() {
               <CardContent className="pt-6">
                 <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6">
                   <Image
-                    src="/sakshee.jpg?height=128&width=128"
+                    src="/sak.jpg?height=128&width=128"
                     alt="Team Member"
                     width={128}
                     height={128}
