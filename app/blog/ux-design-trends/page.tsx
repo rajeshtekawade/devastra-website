@@ -35,7 +35,7 @@ export default function BlogPost() {
             </div>
 
             <Image
-              src="/placeholder.svg?height=400&width=800"
+              src="/uxTrends.jpg?height=400&width=800"
               alt="UX Design Trends"
               width={800}
               height={400}
