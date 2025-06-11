@@ -35,7 +35,7 @@ export default function BlogPost() {
             </div>
 
             <Image
-              src="/native.jpg?height=400&width=800"
+              src="/respDesign.jpg?height=400&width=800"
               alt="Native vs. Cross-Platform App Development"
               width={800}
               height={400}
