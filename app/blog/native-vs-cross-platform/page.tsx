@@ -36,7 +36,7 @@ export default function BlogPost() {
             </div>
             
             <Image
-              src="/placeholder.svg?height=400&width=800"
+              src="/native.jpg?height=400&width=800"
               alt="AI in Business"
               width={800}
               height={400}
