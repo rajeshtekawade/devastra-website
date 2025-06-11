@@ -35,7 +35,7 @@ export default function BlogPage() {
           <Card className="border-gray-200 dark:border-gray-800 overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <div className="relative h-64 lg:h-auto">
-                <Image src="/placeholder.svg?height=400&width=600" alt="Featured Post" fill className="object-cover" />
+                <Image src="/futureai.jpg?height=400&width=600" alt="Featured Post" fill className="object-cover" />
               </div>
               <div className="p-6">
                 <Badge className="mb-2">Technology</Badge>
@@ -70,7 +70,7 @@ export default function BlogPage() {
             {/* Post 1 */}
             <Card className="border-gray-200 dark:border-gray-800 overflow-hidden">
               <div className="relative h-48">
-                <Image src="/placeholder.svg?height=200&width=400" alt="Blog Post" fill className="object-cover" />
+                <Image src="/respDesign.jpg?height=200&width=400" alt="Blog Post" fill className="object-cover" />
               </div>
               <CardHeader>
                 <div className="flex justify-between items-center mb-2">
@@ -108,7 +108,7 @@ export default function BlogPage() {
             {/* Post 2 */}
             <Card className="border-gray-200 dark:border-gray-800 overflow-hidden">
               <div className="relative h-48">
-                <Image src="/placeholder.svg?height=200&width=400" alt="Blog Post" fill className="object-cover" />
+                <Image src="/native.jpg?height=200&width=400" alt="Blog Post" fill className="object-cover" />
               </div>
               <CardHeader>
                 <div className="flex justify-between items-center mb-2">
@@ -146,7 +146,7 @@ export default function BlogPage() {
             {/* Post 3 */}
             <Card className="border-gray-200 dark:border-gray-800 overflow-hidden">
               <div className="relative h-48">
-                <Image src="/placeholder.svg?height=200&width=400" alt="Blog Post" fill className="object-cover" />
+                <Image src="/seo.jpg?height=200&width=400" alt="Blog Post" fill className="object-cover" />
               </div>
               <CardHeader>
                 <div className="flex justify-between items-center mb-2">
@@ -184,7 +184,7 @@ export default function BlogPage() {
             {/* Post 4 */}
             <Card className="border-gray-200 dark:border-gray-800 overflow-hidden">
               <div className="relative h-48">
-                <Image src="/placeholder.svg?height=200&width=400" alt="Blog Post" fill className="object-cover" />
+                <Image src="/uxTrends.jpg?height=200&width=400" alt="Blog Post" fill className="object-cover" />
               </div>
               <CardHeader>
                 <div className="flex justify-between items-center mb-2">
@@ -222,7 +222,7 @@ export default function BlogPage() {
             {/* Post 5 */}
             <Card className="border-gray-200 dark:border-gray-800 overflow-hidden">
               <div className="relative h-48">
-                <Image src="/placeholder.svg?height=200&width=400" alt="Blog Post" fill className="object-cover" />
+                <Image src="/roi.jpg?height=200&width=400" alt="Blog Post" fill className="object-cover" />
               </div>
               <CardHeader>
                 <div className="flex justify-between items-center mb-2">
@@ -260,7 +260,7 @@ export default function BlogPage() {
             {/* Post 6 */}
             <Card className="border-gray-200 dark:border-gray-800 overflow-hidden">
               <div className="relative h-48">
-                <Image src="/placeholder.svg?height=200&width=400" alt="Blog Post" fill className="object-cover" />
+                <Image src="/global.jpg?height=200&width=400" alt="Blog Post" fill className="object-cover" />
               </div>
               <CardHeader>
                 <div className="flex justify-between items-center mb-2">
