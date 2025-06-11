@@ -80,7 +80,7 @@ export default function CareersPage() {
             </div>
             <div className="order-first lg:order-last mb-8 lg:mb-0">
               <Image
-                src="/placeholder.svg?height=600&width=600"
+                src="/career.jpg?height=600&width=600"
                 alt="Team Collaboration"
                 width={600}
                 height={600}
