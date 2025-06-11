@@ -35,7 +35,7 @@ export default function BlogPost() {
             </div>
 
             <Image
-              src="/placeholder.svg?height=400&width=800"
+              src="/global.jpg?height=400&width=800"
               alt="DevAstra Launch"
               width={800}
               height={400}
