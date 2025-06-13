@@ -45,10 +45,10 @@ export default function ContactPage() {
                     </Link>
                     <p className="text-gray-600 dark:text-gray-400 mt-2 mb-1">For support:</p>
                     <Link
-                      href="mailto:support@devastra.tech"
+                      href="mailto:devastratechnologies@gmail.com"
                       className="text-purple-600 dark:text-purple-400 hover:underline"
                     >
-                      support@devastra.tech
+                      devastratechnologies@gmail.com
                     </Link>
                   </div>
                 </div>

@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { CheckCircle, Loader2 } from "lucide-react"
+import { CheckCircle, Loader2 } from 'lucide-react'
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 
 export default function QuoteForm() {
@@ -39,42 +39,45 @@ export default function QuoteForm() {
     setError(null)
 
     try {
-      // Send the form data to our API route
-      const response = await fetch("/api/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          formType: "quote",
-          formData: {
-            ...formData,
-            submittedFrom: "Quote Request Form",
-          },
-        }),
+      // Create form data for Web3Forms
+      const web3FormData = new FormData()
+      web3FormData.append('access_key', '6988e870-6739-41f1-a977-b387d7d51d19') // Replace with your access key from web3forms.com
+      web3FormData.append('name', formData.name)
+      web3FormData.append('email', formData.email)
+      web3FormData.append('phone', formData.phone || 'Not provided')
+      web3FormData.append('company', formData.company || 'Not provided')
+      web3FormData.append('service', formData.service || 'Not specified')
+      web3FormData.append('message', formData.message)
+      web3FormData.append('subject', 'New Quote Request from DevAstra Tech Website')
+      web3FormData.append('from_name', 'DevAstra Tech Website')
+      
+      // Send to Web3Forms API
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: web3FormData
       })
 
       const result = await response.json()
 
-      if (!response.ok) {
-        throw new Error(result.error || "Failed to submit form")
+      if (result.success) {
+        // Show success message
+        setIsSubmitted(true)
+
+        // Reset form after 5 seconds
+        setTimeout(() => {
+          setIsSubmitted(false)
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            company: "",
+            service: "",
+            message: "",
+          })
+        }, 5000)
+      } else {
+        throw new Error(result.message || "Failed to submit form")
       }
-
-      // Show success message
-      setIsSubmitted(true)
-
-      // Reset form after 5 seconds
-      setTimeout(() => {
-        setIsSubmitted(false)
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          company: "",
-          service: "",
-          message: "",
-        })
-      }, 5000)
     } catch (err) {
       console.error("Error submitting form:", err)
       setError(err instanceof Error ? err.message : "An unexpected error occurred")
