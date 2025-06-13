@@ -227,9 +227,9 @@ export default function AboutPage() {
                   />
                 </div>
                 <h3 className="text-xl font-bold mb-1">Om Salunkhe</h3>
-                <p className="text-purple-600 dark:text-purple-400 mb-4">Creative Director</p>
+                <p className="text-purple-600 dark:text-purple-400 mb-4">CPO</p>
                 <p className="text-gray-600 dark:text-gray-400 mb-6">
-                  Om leads the creative vision at DevAstra, crafting engaging designs that blend innovation with impactful user experiences.
+                  Om directs product strategy at DevAstra Tech, merging deep technical insight with creative innovation to deliver intuitive and feature-rich digital solutions.
                 </p>
                 <div className="flex justify-center space-x-4">
                   <Link href="#" className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
