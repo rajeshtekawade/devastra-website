@@ -101,7 +101,7 @@ export default function ContactPage() {
                 <h3 className="text-xl font-bold mb-4">Connect With Us</h3>
                 <div className="flex space-x-4">
                   <Link
-                    href="#"
+                    href="https://www.facebook.com/profile.php?id=61577136521065"
                     className="bg-gray-100 dark:bg-gray-800 p-3 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
                   >
                     <svg className="h-5 w-5 text-gray-700 dark:text-gray-300" fill="currentColor" viewBox="0 0 24 24">
@@ -110,7 +110,7 @@ export default function ContactPage() {
                     <span className="sr-only">Facebook</span>
                   </Link>
                   <Link
-                    href="#"
+                    href="https://www.instagram.com/devastra_tech?igsh=b2podW42Y2l3ZHVp"
                     className="bg-gray-100 dark:bg-gray-800 p-3 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
                   >
                     <svg className="h-5 w-5 text-gray-700 dark:text-gray-300" fill="currentColor" viewBox="0 0 24 24">
@@ -119,7 +119,7 @@ export default function ContactPage() {
                     <span className="sr-only">Instagram</span>
                   </Link>
                   <Link
-                    href="#"
+                    href="https://x.com/devastra_tech?t=iBEcWcTxxxvk_URipnODZg&s=08"
                     className="bg-gray-100 dark:bg-gray-800 p-3 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
                   >
                     <svg className="h-5 w-5 text-gray-700 dark:text-gray-300" fill="currentColor" viewBox="0 0 24 24">
@@ -128,7 +128,7 @@ export default function ContactPage() {
                     <span className="sr-only">Twitter</span>
                   </Link>
                   <Link
-                    href="#"
+                    href="https://www.linkedin.com/company/devastra-technologies/"
                     className="bg-gray-100 dark:bg-gray-800 p-3 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
                   >
                     <svg className="h-5 w-5 text-gray-700 dark:text-gray-300" fill="currentColor" viewBox="0 0 24 24">
@@ -164,9 +164,9 @@ export default function ContactPage() {
         title="Our Location"
         src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1108.5449438566066!2d73.86607621226342!3d18.51788745201287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1748106775480!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
         className="w-full h-full"
-        style={{ border: 0 }}
-        allowFullScreen=""
-        loading="lazy"s
+        style={{ border: 0}}
+        allowFullScreen={true}
+        loading="lazy"s="lazt"
         referrerPolicy="no-referrer-when-downgrade"
       ></iframe>
     </div>

@@ -295,65 +295,9 @@ export default function BlogPage() {
               </CardFooter>
             </Card>
           </div>
-
-          <div className="text-center mt-12">
-            <Button variant="outline" asChild>
-              <Link href="/blog/archive">View All Posts</Link>
-            </Button>
-          </div>
         </div>
       </section>
 
-      {/* Categories */}
-      <section className="py-12 bg-gray-50 dark:bg-gray-900">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold mb-8">Categories</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            <Link
-              href="/blog/category/web-development"
-              className="bg-white dark:bg-gray-800 rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-shadow border border-gray-200 dark:border-gray-700"
-            >
-              <h3 className="font-semibold mb-2">Web Development</h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400">12 articles</p>
-            </Link>
-            <Link
-              href="/blog/category/app-development"
-              className="bg-white dark:bg-gray-800 rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-shadow border border-gray-200 dark:border-gray-700"
-            >
-              <h3 className="font-semibold mb-2">App Development</h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400">8 articles</p>
-            </Link>
-            <Link
-              href="/blog/category/ui-ux-design"
-              className="bg-white dark:bg-gray-800 rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-shadow border border-gray-200 dark:border-gray-700"
-            >
-              <h3 className="font-semibold mb-2">UI/UX Design</h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400">10 articles</p>
-            </Link>
-            <Link
-              href="/blog/category/digital-marketing"
-              className="bg-white dark:bg-gray-800 rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-shadow border border-gray-200 dark:border-gray-700"
-            >
-              <h3 className="font-semibold mb-2">Digital Marketing</h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400">15 articles</p>
-            </Link>
-            <Link
-              href="/blog/category/business-automation"
-              className="bg-white dark:bg-gray-800 rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-shadow border border-gray-200 dark:border-gray-700"
-            >
-              <h3 className="font-semibold mb-2">Business Automation</h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400">7 articles</p>
-            </Link>
-            <Link
-              href="/blog/category/company-news"
-              className="bg-white dark:bg-gray-800 rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-shadow border border-gray-200 dark:border-gray-700"
-            >
-              <h3 className="font-semibold mb-2">Company News</h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400">5 articles</p>
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* Newsletter */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-500 text-white">

@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
@@ -25,12 +26,12 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-        <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5">
-            <span className="sr-only">DevAstra Tech</span>
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
+        <div className="flex items-center space-x-3 lg:flex-1">
+          <Link href="/" className="flex items-center space-x-2 -m-1.5 p-1.5">
+            <Image src="/logohead.png" alt="DevAstra Logo" width={90} height={90} />
+            <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
               DevAstra Tech
-            </h1>
+            </span>
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -93,8 +94,8 @@ export default function Header() {
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Button asChild>
-                <Link href="/contact">Get a Free Quote</Link>
-              </Button>
+            <Link href="/contact">Get a Free Quote</Link>
+          </Button>
         </div>
       </nav>
     </header>

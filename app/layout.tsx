@@ -13,7 +13,11 @@ export const metadata: Metadata = {
   title: "DevAstra Tech - IT Solutions & Digital Services",
   description:
     "Professional IT solutions including web development, app development, UI/UX design, digital marketing, and business automation services.",
-    generator: 'v0.dev'
+    generator: 'v0.dev',
+  icons: {
+    icon: "/icon.png", 
+  },
+  
 }
 
 export default function RootLayout({

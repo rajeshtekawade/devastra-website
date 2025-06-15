@@ -27,13 +27,11 @@ export default function PortfolioPage() {
         <div className="container mx-auto px-4">
           <Tabs defaultValue="all" className="w-full">
             <div className="flex justify-center mb-8">
-              <TabsList className="grid grid-cols-2 md:grid-cols-6 w-full max-w-3xl">
+              <TabsList className="grid grid-cols-2 md:grid-cols-4 w-full max-w-3xl">
                 <TabsTrigger value="all">All</TabsTrigger>
                 <TabsTrigger value="web">Web</TabsTrigger>
                 <TabsTrigger value="app">App</TabsTrigger>
                 <TabsTrigger value="ui-ux">UI/UX</TabsTrigger>
-                <TabsTrigger value="marketing">Marketing</TabsTrigger>
-                <TabsTrigger value="automation">Automation</TabsTrigger>
               </TabsList>
             </div>
 
@@ -86,7 +84,7 @@ export default function PortfolioPage() {
                   <CardHeader>
                     <div className="flex justify-between items-start">
                       <div>
-                        <CardTitle>Airbnb Clone</CardTitle>
+                        <CardTitle>Staynest</CardTitle>
                         <CardDescription>Airbnb Clone App</CardDescription>
                       </div>
                       <Badge>Web</Badge>
@@ -119,7 +117,7 @@ export default function PortfolioPage() {
                   <CardHeader>
                     <div className="flex justify-between items-start">
                       <div>
-                        <CardTitle>Expense Tracker</CardTitle>
+                        <CardTitle>Expensio</CardTitle>
                         <CardDescription>Expense Tracker App</CardDescription>
                       </div>
                       <Badge>UI/UX</Badge>
@@ -152,7 +150,7 @@ export default function PortfolioPage() {
                   <CardHeader>
                     <div className="flex justify-between items-start">
                       <div>
-                        <CardTitle>College User App</CardTitle>
+                        <CardTitle>StudySphere</CardTitle>
                         <CardDescription>College User Application</CardDescription>
                       </div>
                       <Badge>App</Badge>
@@ -185,7 +183,7 @@ export default function PortfolioPage() {
                   <CardHeader>
                     <div className="flex justify-between items-start">
                       <div>
-                        <CardTitle>College Admin App</CardTitle>
+                        <CardTitle>AdminDesk</CardTitle>
                         <CardDescription>College Admin Application</CardDescription>
                       </div>
                       <Badge>App</Badge>
@@ -256,7 +254,7 @@ export default function PortfolioPage() {
                   <CardHeader>
                     <div className="flex justify-between items-start">
                       <div>
-                        <CardTitle>Airbnb Clone</CardTitle>
+                        <CardTitle>Staynest</CardTitle>
                         <CardDescription>Airbnb Clone App</CardDescription>
                       </div>
                       <Badge>Web</Badge>
@@ -294,7 +292,7 @@ export default function PortfolioPage() {
                   <CardHeader>
                     <div className="flex justify-between items-start">
                       <div>
-                        <CardTitle>College User App</CardTitle>
+                        <CardTitle>StudySphere</CardTitle>
                         <CardDescription>College User Application</CardDescription>
                       </div>
                       <Badge>App</Badge>
@@ -327,7 +325,7 @@ export default function PortfolioPage() {
                   <CardHeader>
                     <div className="flex justify-between items-start">
                       <div>
-                        <CardTitle>College Admin App</CardTitle>
+                        <CardTitle>AdminDesk</CardTitle>
                         <CardDescription>College Admin Application</CardDescription>
                       </div>
                       <Badge>App</Badge>
@@ -365,7 +363,7 @@ export default function PortfolioPage() {
                   <CardHeader>
                     <div className="flex justify-between items-start">
                       <div>
-                        <CardTitle>Expense Tracker</CardTitle>
+                        <CardTitle>Expensio</CardTitle>
                         <CardDescription>Expense Tracker App</CardDescription>
                       </div>
                       <Badge>UI/UX</Badge>
@@ -380,82 +378,6 @@ export default function PortfolioPage() {
                     <Button variant="outline" className="w-full" asChild>
                       <Link href="https://devastra-expense-tracker.netlify.app/">
                         View Project <ExternalLink className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
-                  </CardFooter>
-                </Card>
-              </div>
-            </TabsContent>
-
-            {/* Marketing Projects */}
-            <TabsContent value="marketing">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {/* Project 4 */}
-                <Card className="overflow-hidden border-gray-200 dark:border-gray-800 hover:shadow-lg transition-shadow">
-                  <div className="relative h-60">
-                    <Image
-                      src="/placeholder.svg?height=240&width=400"
-                      alt="Digital Marketing Campaign"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <CardHeader>
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <CardTitle>GreenEarth</CardTitle>
-                        <CardDescription>Marketing Campaign</CardDescription>
-                      </div>
-                      <Badge>Marketing</Badge>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      A multi-channel digital marketing campaign that increased brand awareness by 200% in 3 months.
-                    </p>
-                  </CardContent>
-                  <CardFooter>
-                    <Button variant="outline" className="w-full" asChild>
-                      <Link href="/portfolio/greenearth">
-                        View Case Study <ExternalLink className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
-                  </CardFooter>
-                </Card>
-              </div>
-            </TabsContent>
-
-            {/* Automation Projects */}
-            <TabsContent value="automation">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {/* Project 5 */}
-                <Card className="overflow-hidden border-gray-200 dark:border-gray-800 hover:shadow-lg transition-shadow">
-                  <div className="relative h-60">
-                    <Image
-                      src="/placeholder.svg?height=240&width=400"
-                      alt="Business Automation"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <CardHeader>
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <CardTitle>LogiFlow</CardTitle>
-                        <CardDescription>Logistics Automation</CardDescription>
-                      </div>
-                      <Badge>Automation</Badge>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      An automated logistics management system that reduced processing time by 60% and errors by 80%.
-                    </p>
-                  </CardContent>
-                  <CardFooter>
-                    <Button variant="outline" className="w-full" asChild>
-                      <Link href="/portfolio/logiflow">
-                        View Case Study <ExternalLink className="ml-2 h-4 w-4" />
                       </Link>
                     </Button>
                   </CardFooter>
