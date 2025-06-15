@@ -1,15 +1,22 @@
 "use client"
 
 import type React from "react"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3821f0d8a110f5096ffd449cd4d18d9246bf1f4d
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { MessageCircle, Send, X } from "lucide-react"
 
+<<<<<<< HEAD
 // ✅ Update the path to your actual geminiService.ts file
 import { getGeminiResponse } from "./geminiServices"
 
+=======
+>>>>>>> 3821f0d8a110f5096ffd449cd4d18d9246bf1f4d
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false)
   const [message, setMessage] = useState("")
@@ -21,6 +28,7 @@ export default function ChatWidget() {
     },
   ])
 
+<<<<<<< HEAD
   const handleSendMessage = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!message.trim()) return
@@ -46,15 +54,43 @@ export default function ChatWidget() {
 
       setChatHistory((prev) => [...prev, botMessage])
     } catch (error) {
+=======
+  const handleSendMessage = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!message.trim()) return
+
+    // Add user message to chat
+    setChatHistory([
+      ...chatHistory,
+      {
+        sender: "user",
+        message: message,
+        timestamp: new Date(),
+      },
+    ])
+
+    // Simulate bot response
+    setTimeout(() => {
+>>>>>>> 3821f0d8a110f5096ffd449cd4d18d9246bf1f4d
       setChatHistory((prev) => [
         ...prev,
         {
           sender: "bot",
+<<<<<<< HEAD
           message: "Oops! Something went wrong. Please try again.",
           timestamp: new Date(),
         },
       ])
     }
+=======
+          message: "Thank you for your message! Our team will get back to you shortly.",
+          timestamp: new Date(),
+        },
+      ])
+    }, 1000)
+
+    setMessage("")
+>>>>>>> 3821f0d8a110f5096ffd449cd4d18d9246bf1f4d
   }
 
   return (
@@ -98,7 +134,11 @@ export default function ChatWidget() {
                         : "bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100"
                     }`}
                   >
+<<<<<<< HEAD
                     <p className="text-sm whitespace-pre-wrap">{chat.message}</p>
+=======
+                    <p className="text-sm">{chat.message}</p>
+>>>>>>> 3821f0d8a110f5096ffd449cd4d18d9246bf1f4d
                     <p className="text-xs mt-1 opacity-70">
                       {chat.timestamp.toLocaleTimeString([], {
                         hour: "2-digit",
@@ -114,7 +154,11 @@ export default function ChatWidget() {
             <div className="w-full">
               <div className="text-xs text-gray-400 mb-2 flex items-center">
                 <span className="bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 px-2 py-0.5 rounded text-[10px] font-medium">
+<<<<<<< HEAD
                   Powered by Gemini
+=======
+                  Powered by ApX Engine
+>>>>>>> 3821f0d8a110f5096ffd449cd4d18d9246bf1f4d
                 </span>
               </div>
               <form onSubmit={handleSendMessage} className="flex w-full gap-2">
