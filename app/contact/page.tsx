@@ -65,7 +65,7 @@ export default function ContactPage() {
                     </Link>
                     <p className="text-gray-600 dark:text-gray-400 mt-2 mb-1">Customer Support:</p>
                     <Link href="tel:+1234567891" className="text-purple-600 dark:text-purple-400 hover:underline">
-                      +1 (234) 567-891
+                      +91 7385602672
                     </Link>
                   </div>
                 </div>

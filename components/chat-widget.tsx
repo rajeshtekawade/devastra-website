@@ -114,7 +114,7 @@ export default function ChatWidget() {
             <div className="w-full">
               <div className="text-xs text-gray-400 mb-2 flex items-center">
                 <span className="bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 px-2 py-0.5 rounded text-[10px] font-medium">
-                  Powered by Gemini
+                  Powered by ApX Engine 
                 </span>
               </div>
               <form onSubmit={handleSendMessage} className="flex w-full gap-2">

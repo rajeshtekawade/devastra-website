@@ -79,7 +79,7 @@ export default function Home() {
                 </div>
               </div>
               <Button asChild>
-                <Link href="/contact">Learn More About ApX Engine</Link>
+                <Link href="/services">Learn More About ApX Engine</Link>
               </Button>
             </div>
             <div className="md:w-1/2 mt-8 md:mt-0">
@@ -347,9 +347,7 @@ export default function Home() {
                 </div>
                 <blockquote className="text-center mb-8">
                   <p className="text-lg italic text-gray-700 dark:text-gray-300">
-                    "The mobile app DevAstra Tech developed for us has revolutionized how we interact with our
-                    customers. Their attention to detail and focus on user experience resulted in an app that our users
-                    love."
+                    "The UI/UX design crafted by DevAstra Tech for our expense tracker app, Expensio, was outstanding. It’s clean, intuitive, and our users love how simple it is to manage their finances now."
                   </p>
                 </blockquote>
                 <div className="flex flex-col items-center">
@@ -362,8 +360,8 @@ export default function Home() {
                       className="object-cover"
                     />
                   </div>
-                  <p className="font-semibold">Michael Chen</p>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">CEO, InnovateCo</p>
+                  <p className="font-semibold">Amit Naik</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">Product Manager, Expensio</p>
                 </div>
               </CardContent>
             </Card>
@@ -380,9 +378,7 @@ export default function Home() {
                 </div>
                 <blockquote className="text-center mb-8">
                   <p className="text-lg italic text-gray-700 dark:text-gray-300">
-                    "DevAstra Tech's digital marketing strategies helped us increase our online visibility and generate
-                    more qualified leads. Their data-driven approach and regular reporting kept us informed every step
-                    of the way."
+                    "Working with DevAstra Tech on our StudySphere app was a game changer. The app runs smoothly, is packed with features, and has become essential for our student users across campuses."
                   </p>
                 </blockquote>
                 <div className="flex flex-col items-center">
@@ -395,8 +391,8 @@ export default function Home() {
                       className="object-cover"
                     />
                   </div>
-                  <p className="font-semibold">Emily Rodriguez</p>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">Owner, GrowthBiz</p>
+                  <p className="font-semibold">Priya Kulkarni</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">Co-Founder, StudySphere</p>
                 </div>
               </CardContent>
             </Card>

@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
-import { CheckCircle, Loader2 } from "lucide-react"
+import { CheckCircle, Loader2, Info } from "lucide-react"
 
 const JobApplicationForm = () => {
   const [formData, setFormData] = useState({
@@ -17,9 +17,11 @@ const JobApplicationForm = () => {
     phone: "",
     position: "web-development-intern",
     coverLetter: "",
-    resumeFileName: "",
+    linkedinProfile: "",
+    portfolioLink: "",
+    experience: "",
+    skills: "",
   })
-  const [resumeFile, setResumeFile] = useState<File | null>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -33,44 +35,41 @@ const JobApplicationForm = () => {
     setFormData((prev) => ({ ...prev, position: value }))
   }
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files.length > 0) {
-      const file = e.target.files[0]
-      setResumeFile(file)
-      setFormData((prev) => ({ ...prev, resumeFileName: file.name }))
-    }
-  }
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
     setError(null)
 
     try {
-      // For now, we'll just send the form data without the actual file
-      // In a real implementation, you would use FormData to send the file
-      const response = await fetch("/api/send-email", {
+      // Create form data for Web3Forms
+      const web3FormData = new FormData()
+      web3FormData.append("access_key", "6988e870-6739-41f1-a977-b387d7d51d19") // Replace with your access key from web3forms.com
+      web3FormData.append("name", formData.name)
+      web3FormData.append("email", formData.email)
+      web3FormData.append("phone", formData.phone || "Not provided")
+      web3FormData.append("position", formData.position)
+      web3FormData.append("cover_letter", formData.coverLetter || "Not provided")
+      web3FormData.append("linkedin_profile", formData.linkedinProfile || "Not provided")
+      web3FormData.append("portfolio_link", formData.portfolioLink || "Not provided")
+      web3FormData.append("experience", formData.experience || "Not provided")
+      web3FormData.append("skills", formData.skills || "Not provided")
+      web3FormData.append("subject", "New Job Application from DevAstra Tech Website")
+      web3FormData.append("from_name", "DevAstra Tech Website")
+
+      // Send to Web3Forms API
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          formType: "job",
-          formData: {
-            ...formData,
-            submittedFrom: "Job Application Form",
-          },
-        }),
+        body: web3FormData,
       })
 
       const result = await response.json()
 
-      if (!response.ok) {
-        throw new Error(result.error || "Failed to submit application")
+      if (result.success) {
+        // Show success message
+        setIsSubmitted(true)
+      } else {
+        throw new Error(result.message || "Failed to submit application")
       }
-
-      // Show success message
-      setIsSubmitted(true)
     } catch (err) {
       console.error("Error submitting form:", err)
       setError(err instanceof Error ? err.message : "An unexpected error occurred")
@@ -106,6 +105,15 @@ const JobApplicationForm = () => {
           <AlertDescription>{error}</AlertDescription>
         </Alert>
       )}
+
+      <Alert className="mb-6">
+        <Info className="h-4 w-4" />
+        <AlertTitle>Application Requirements</AlertTitle>
+        <AlertDescription>
+          Please provide links to your professional profiles and resume. At least one of LinkedIn profile or resume link
+          is required.
+        </AlertDescription>
+      </Alert>
 
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -165,6 +173,61 @@ const JobApplicationForm = () => {
         </div>
 
         <div className="space-y-2">
+          <Label htmlFor="linkedinProfile">LinkedIn Profile *</Label>
+          <Input
+            id="linkedinProfile"
+            name="linkedinProfile"
+            type="url"
+            value={formData.linkedinProfile}
+            onChange={handleChange}
+            required
+            placeholder="https://linkedin.com/in/your-profile"
+          />
+          <p className="text-xs text-gray-500 dark:text-gray-400">Your LinkedIn profile URL</p>
+        </div>
+
+        <div className="space-y-2">
+          <Label htmlFor="portfolioLink">Portfolio Link</Label>
+          <Input
+            id="portfolioLink"
+            name="portfolioLink"
+            type="url"
+            value={formData.portfolioLink}
+            onChange={handleChange}
+            placeholder="https://yourportfolio.com or https://github.com/yourusername"
+          />
+          <p className="text-xs text-gray-500 dark:text-gray-400">
+            Link to your portfolio website, GitHub profile, or Behance/Dribbble for designers
+          </p>
+        </div>
+
+        <div className="space-y-2">
+          <Label htmlFor="experience">Work Experience *</Label>
+          <Textarea
+            id="experience"
+            name="experience"
+            value={formData.experience}
+            onChange={handleChange}
+            required
+            placeholder="Describe your relevant work experience, internships, projects, or education..."
+            rows={4}
+          />
+        </div>
+
+        <div className="space-y-2">
+          <Label htmlFor="skills">Skills & Technologies *</Label>
+          <Textarea
+            id="skills"
+            name="skills"
+            value={formData.skills}
+            onChange={handleChange}
+            required
+            placeholder="List your technical skills, programming languages, tools, and technologies..."
+            rows={3}
+          />
+        </div>
+
+        <div className="space-y-2">
           <Label htmlFor="coverLetter">Cover Letter</Label>
           <Textarea
             id="coverLetter"
@@ -174,22 +237,6 @@ const JobApplicationForm = () => {
             placeholder="Tell us why you're interested in this position and what makes you a good fit..."
             rows={5}
           />
-        </div>
-
-        <div className="space-y-2">
-          <Label htmlFor="resume">Resume/CV *</Label>
-          <Input
-            id="resume"
-            name="resume"
-            type="file"
-            onChange={handleFileChange}
-            required
-            accept=".pdf,.doc,.docx"
-            className="cursor-pointer"
-          />
-          <p className="text-xs text-gray-500 dark:text-gray-400">
-            Accepted formats: PDF, DOC, DOCX. Maximum size: 5MB
-          </p>
         </div>
 
         <Button type="submit" className="w-full" disabled={isSubmitting}>
@@ -202,6 +249,10 @@ const JobApplicationForm = () => {
             "Submit Application"
           )}
         </Button>
+
+        <p className="text-xs text-center text-gray-500 dark:text-gray-400">
+          By submitting this application, you agree to our Privacy Policy and Terms of Service.
+        </p>
       </form>
     </div>
   )
